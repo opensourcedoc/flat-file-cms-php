@@ -1,6 +1,6 @@
-# Frameworkless PHP
+# Flat-File CMS in PHP
 
-A "no framework" approach to PHP web development.
+Implement a flat-file CMS with plain PHP.
 
 ## System Requirements
 
@@ -9,6 +9,7 @@ A "no framework" approach to PHP web development.
 * Production
   * A major GNU/Linux distribution is recommended
   * [PHP](https://www.php.net/) 8.1 or above
+  * [CommonMark](https://commonmark.thephpleague.com/)
 * Development
   * [Composer](https://getcomposer.org/)
 
@@ -38,35 +39,19 @@ A "no framework" approach to PHP web development.
 
 ## Usage
 
-Clone the repo locally:
+Clone the repo:
 
 ```shell
-$ git clone https://github.com/cwchentw/frameworkless-php.git myapp
-$ cd myapp
+$ git clone https://github.com/opensourcedoc/flat-file-cms-php.git
+$ cd flat-file-cms-php
 ```
 
-Run your web app locally:
+Run the website locally:
 
 ```shell
-$ ./tools/bin/serve localhost:3000
+$ ./tools/bin/serve localhost:5000
 ```
-
-To deploy your app to a PaaS, invoke this command:
-
-```shell
-$ ./tools/bin/publish
-```
-
-This command exposes all external files to *public* directory.
-
-To deploy your app to an IaaS, invoke this command:
-
-```shell
-$ sudo ./tools/bin/sync-to /path/to/www
-```
-
-The root directory of your app is located in *www* directory.
 
 ## Copyright
 
-Copyright (c) 2021-2022 Michelle Chen. Licensed under MIT
+Copyright (c) 2022 Michelle Chen. Licensed under MIT

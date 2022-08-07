@@ -1,6 +1,6 @@
 {
-    "name": "cwchen/frameworkless-php",
-    "description": "PHP Boilerplate Web Project",
+    "name": "cwchen/flat-file-cms-php",
+    "description": "Flat-file CMS with plain PHP",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "league/commonmark": "^2.3"
     }
 }
