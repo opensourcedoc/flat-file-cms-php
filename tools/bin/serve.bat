@@ -31,11 +31,26 @@ set libexec=%cwd%..\libexec
 rem Get the root path.
 set root=%cwd%..\..
 
+rem Generate site settings if it doesn't exist.
+if not exist %lib%\settings.bat (
+    call %bin%\init.bat || (
+        exit /b %ERRORLEVEL%
+    )
+)
+
+rem Load site settings.
+call %lib%\settings.bat
+
 rem Download third-party PHP packages if they don't exist.
 if not exist %root%\vendor (
     call composer install --no-dev || (
         exit /b %ERRORLEVEL%
     )
+)
+
+rem Create a 404.html
+call %bin%\404.bat || (
+    exit /b %ERRORLEVEL%
 )
 
 rem Load assets.
