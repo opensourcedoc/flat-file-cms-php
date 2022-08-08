@@ -28,6 +28,17 @@ libexec="${cwd}/../libexec";
 # Get the root path.
 root="${cwd}/../..";
 
+# Generate site settings if it doesn't exist.
+if ! [ -f "${lib}/settings.sh" ];
+then
+    "${bin}/init" > "${lib}/settings.sh" || (
+        exit $?;
+    )
+fi
+
+# Load site settings.
+. "${lib}/settings.sh";
+
 # Download third-party PHP packages if they don't exist.
 if ! [ -d "${root}/vendor" ];
 then
@@ -48,6 +59,11 @@ then
         exit $?;
     )
 fi
+
+# Create 404.html
+"${bin}/404" || (
+    exit $?;
+)
 
 # Load assets.
 "${bin}/assets" || (
