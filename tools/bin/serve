@@ -65,6 +65,11 @@ fi
     exit $?;
 )
 
+# Create 404.html
+"${bin}/405" || (
+    exit $?;
+)
+
 # Load assets.
 "${bin}/assets" || (
     exit $?;
