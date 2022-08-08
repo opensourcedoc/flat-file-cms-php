@@ -53,6 +53,11 @@ call %bin%\404.bat || (
     exit /b %ERRORLEVEL%
 )
 
+rem Create a 405.html
+call %bin%\405.bat || (
+    exit /b %ERRORLEVEL%
+)
+
 rem Load assets.
 call %bin%\assets.bat || (
     exit /b %ERRORLEVEL%
