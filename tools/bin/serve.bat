@@ -58,6 +58,11 @@ call %bin%\405.bat || (
     exit /b %ERRORLEVEL%
 )
 
+rem Create a 50x.html
+call %bin%\50x.bat || (
+    exit /b %ERRORLEVEL%
+)
+
 rem Load assets.
 call %bin%\assets.bat || (
     exit /b %ERRORLEVEL%

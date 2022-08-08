@@ -1,5 +1,5 @@
 @echo off
-rem A utility script to generate a 405.html.
+rem A utility script to generate a 50x.html.
 
 
 rem Check whether PHP is available on the system.
@@ -35,8 +35,8 @@ if not exist %public% (
     )
 )
 
-rem Create a 405.html.
-php %libexec%\405.php > %public%\405.html || (
-    echo Unable to create a 405.html >&2
+rem Create a 50x.html.
+php %libexec%\50x.php > %public%\50x.html || (
+    echo Unable to create a 50x.html >&2
     exit /b 1
 )
